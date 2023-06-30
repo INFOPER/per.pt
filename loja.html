@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="styleloja.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+    
+        #loader.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+    
+        #loader img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(window).on("load", function() {
+            setTimeout(function() {
+                $("#loader").addClass("hide");
+            }, 1000); // Defina a velocidade em milissegundos
+        });
+    </script>
+
+    <title>Loja</title>
+</head>
+<body>
+    <div id="loader">
+		<img src="img/Loading miguel/loading.gif" alt="Carregando...">
+   </div>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <div class="logo">
+                <a href="index.html"><img src="logotipo/PNG/logo.png" alt="Logo" id="logo"></a></span>
+                <a href="index.html"><img src="logotipo/PNG/logo-dark.png" alt="Dark Logo" id="dark-logo"></a>
+              </div>
+                
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo">
+                <a href="#"><img src="logotipo/PNG/logo.png" alt="Logo" id="logo"></a>
+                <a href="#"><img src="logotipo/PNG/logo-dark.png" alt="Dark Logo" id="dark-logo"></a></span>                  
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="inicio">Página Inicial</a></li>
+                    <li><a href="loja.html" class="loja">Loja</a></li>
+                    <li><a href="sobrenos.html" class="Sobre">Sobre nós</a></li>
+                    <li><a href="contactos.html" class="Contacto">Contactos</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                   <div class="search-field">
+                    <a href="" target="_blank" hidden></a>
+                      <input type="text" placeholder="Procurar...">
+                      <div class="autocom-box">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                      <i class='bx bx-search'></i>
+                  </div>
+              </div>
+
+                <div class="cart-toggle">
+                        <i class='bx bx-shopping-bag'></i>
+                    </div>
+                    <section id="products"></section>
+
+
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+            </div>
+       
+
+            <!-- Backdrop -->
+            <div class="backdrop"></div>
+            <!-- Side Cart-->
+            <div id="sidecart" class="sidecart">
+                <div class="cart_content">
+                    <!-- Cart Header -->
+                    <div class="cart_header">
+                        <i class='bx bx-shopping-bag'></i>
+                        <div class="header_title">  
+                            <h2>Lista de Produtos</h2>
+                            <span id="items_num">0</span>
+                        </div>
+                        <span id="close_btn" class="close_btn">&times;</span>
+                    </div>
+                    <!-- Cart Items -->
+                    <div class="cart_items"></div>
+                    <!-- Cart Actions-->
+                    <div class="cart_actions">
+                        <div class="subtotal">
+                            <p>TOTAL</p>
+                            <p><span id="subtotal_price"> €</span></p>
+                        </div>
+                        <button id="ver_produtos_btn">Ver Artigos</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="dark-mode">
+        <section id="hero">
+          <h1>BEM VINDO A NOSSA LOJA</h1>
+        </section>
+      </main>
+      
+      <main class="dark-mode">
+        <section id="hero2">
+          <h2>Aqui tens o nosso catalgo com alguns dos nossos artigos</h2>
+          
+          <p>Produtos ecológicos: <normal class="color-black">Faça a sua parte pelo planeta</normal></br>
+          Produtos reciclados: <normal class="color-black">Aproveite ao máximo sem prejudicar o meio ambiente</normal></p></br>
+        </section>
+      </main>
+         
+      
+         <!-- Itens -->
+         <div class="items"></div>
+<p><br></p>
+         <main class="dark-mode">
+          <section id="hero2">
+            <h2>Ecológicos x Reciclados:<normal class="color-black"> Qual é a tua escolha?</normal></h2>
+            <p><br>
+              <main class="dark-mode">
+                <section id="hero2">
+                  <h2>Qual a diferença entre produtos ecológicos e produtos reciclados?</h2>
+                  <p><br>
+                  </p>Produtos ecológicos:<normal class="color-yellow">Um produto ecológico é aquele que é projetado e fabricado tendo em conta o impacto ambiental em todas as etapas do seu ciclo de vida. Isso significa que são utilizados materiais sustentáveis, processos de produção limpos e energia renovável sempre que possível. Além disso, esses produtos costumam ter uma pegada ambiental reduzida em termos de emissões de carbono, uso de recursos naturais e geração de resíduos.</normal></br>
+                  </p>Produtos reciclados:<normal class="color-yellow">Por outro lado, um produto reciclado é aquele que é feito a partir de materiais que foram recuperados ou reciclados de produtos existentes. Isso significa que o material original passou por um processo de reciclagem para ser transformado num novo produto. A reciclagem ajuda a reduzir a quantidade de resíduos enviados para aterros sanitários e a preservar recursos naturais, evitando a extração de novos materiais virgens.</normal></p>
+                <br><normal class="color-yellow">Assim, a diferença principal é que um produto ecológico está relacionado com a forma como é projetado e fabricado, tendo em conta o impacto ambiental em todas as etapas, enquanto um produto reciclado refere-se ao uso de materiais recuperados ou reciclados na sua fabricação. No entanto, é importante destacar que um produto pode ser tanto ecológico quanto reciclado, ou seja, pode ser projetado de forma sustentável e ainda incorporar materiais reciclados na sua composição.</normal></p></br>
+                <p><br><h2 id="adquirir-produtos">A onde adquirir os produtos?</h2>
+                <p><br>
+                </p><normal class="color-yellow">Podes adquirir os nossos produtos exclusivos de forma rápida e fácil! Basta entrar em contacto connosco através das nossas redes sociais facebook instagram ou twitter. Envia-nos uma mensagem com o nome do produto desejado e teremos todo o prazer em fornecer todas as informações necessárias para a tua compra. Não perca tempo, estamos apenas a um clique de distância</normal></br>
+              </section>
+              </main>
+
+
+          
+          </section>
+        </main>
+        <main class="devolucao">
+          <section id="hero3">
+        <h2><br><p><strong class="color-green">Algumas das nossas políticas de devoluções</strong></h2>
+                  </section>
+                </main>
+                <div class="container">
+                  <div class="contacts-container">
+                   <div class="contacts-left">
+                     <p><strong class="color-blue">Prazo para a devolução:</strong><br> 14 dias é o período de tempo durante o qual os clientes podem devolver um produto após a entrega do mesmo.
+             
+             </p>
+                     <p><strong class="color-blue">Custos de envio:</strong><br>Os custos de envio serão pagos pela nossa empressa, o cliente não tem quaisquer custos a não ser o produto em si.</p>
+                   </div>
+                   <div class="contacts-right">
+                     <p><strong class="color-blue">Condições para a devolução:</strong><br>O produto deve ser devolvido, como a embalagem original, etiquetas e documentação.
+                     </p>
+                     <p><strong class="color-blue">Reembolso:</strong><br>O reembolso será feito na forma de crédito na loja.</p>
+                   </div>
+                 </div>
+               </div>
+
+    <script src="scriptloja.js"></script>
+
+    <footer>
+        <div class="content">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic">Quem somos</div>
+              <p>A PER é uma marca sustentável que produz e comercializa produtos com materiais reciclados e/ou ecológicos o seu objetivo é promover a sustentabilidade e a conscientização ambiental além do objetivo de reduzir a quantidade de resíduos e promover o desenvolvimento sustentável através da economia circular</p>
+            </div>
+            <div class="lower">
+              <div class="topic">Entre em contacto</div>
+              <div class="phone">
+                <a href="contactos.html"><i class='bx bx-phone-call'></i>+250 9089 6767</a>
+              </div>
+              <div class="email">
+                <a href="mailto:INFO.PERPT@gmail.com"><i class='bx bx-envelope'></i>INFO.PERPT@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <a href="#"><img src="logotipo/PNG/lOGO FINALFINAL SEM FUNDO Verde.png" alt="Logo"></a>
+          </div>
+          <div class="right box">
+            <div class="topic">Subscreva a newsletter</div>
+            <form action="#">
+              <input type="email" placeholder="Insira o seu endereço de e-mail" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Insira um email válido">
+              <input type="submit" name="" value="Subscrever">
+              <div class="media-icons">
+                <a href="https://www.facebook.com/profile.php?id=100093947058630" class="facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/infoperpt/" class="instagram"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/INFOPERPT" class="twitter"><i class='bx bxl-twitter' ></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </footer>
+
+</body>
+</html>

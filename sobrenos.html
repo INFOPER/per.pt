@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="stylesobrenos.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+    
+        #loader.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+    
+        #loader img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(window).on("load", function() {
+            setTimeout(function() {
+                $("#loader").addClass("hide");
+            }, 1000); // Defina a velocidade em milissegundos
+        });
+    </script>
+
+    <title>Sobre nós</title>
+</head>
+<body>
+    <div id="loader">
+		<img src="img/Loading miguel/loading.gif" alt="Carregando...">
+   </div>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <div class="logo">
+                <a href="index.html"><img src="logotipo/PNG/logo.png" alt="Logo" id="logo"></a></span>
+                <a href="index.html"><img src="logotipo/PNG/logo-dark.png" alt="Dark Logo" id="dark-logo"></a>
+              </div>
+                
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo">
+                <a href="#"><img src="logotipo/PNG/logo.png" alt="Logo" id="logo"></a>
+                <a href="#"><img src="logotipo/PNG/logo-dark.png" alt="Dark Logo" id="dark-logo"></a></span>                  
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="inicio">Página Inicial</a></li>
+                    <li><a href="loja.html" class="loja">Loja</a></li>
+                    <li><a href="sobrenos.html" class="Sobre">Sobre nós</a></li>
+                    <li><a href="contactos.html" class="Contacto">Contactos</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                   <div class="search-field">
+                    <a href="" target="_blank" hidden></a>
+                      <input type="text" placeholder="Procurar...">
+                      <div class="autocom-box">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                      <i class='bx bx-search'></i>
+                  </div>
+              </div>
+
+                <div class="cart-toggle">
+                      <i class='bx bx-shopping-bag'></i>
+                      <a href="loja.html"></a>
+                  </div>                  
+               
+
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+            </div>
+       
+        </div>
+    </nav>
+      <main class="dark-mode">
+        <section id="hero">
+		  <h1>Conhece mais sobre nós!</h1>
+        </section>
+      </main>
+      <main class="cartao"
+      <section id="hero">
+        <img src="">
+      </section>
+     </main>
+     <div class="container">
+     <h1 class="title-small margin-medium"><strong class="color-blue">Sobre Nós</strong></h1><br>
+     <div class="contacts-container">
+      <div class="wrapper">
+        <p><strong class="color-blue">Historia:</strong><br>A nossa história começa com a crescente preocupação em relação ao meio ambiente e à necessidade de criar um mundo mais sustentável. Com esse objetivo em mente, decidimos criar um site sobre produtos ecológicos e reciclados (PER) para ajudar as pessoas a fazer escolhas mais sustentáveis e conscientes. Percebemos que havia uma grande procura por esses produtos, mas a falta de informações claras e acessíveis estava a dificultar que as pessoas os incorporassem às suas vidas diárias. Por isso, decidimos criar um site que pudesse fornecer essas informações de forma fácil e prática.
+
+</p>
+<p><strong class="color-blue">Missão:</strong><br>A missão do nosso site é promover a adoção de hábitos mais sustentáveis e conscientes, fornecendo informações claras e confiáveis sobre produtos ecológicos e reciclados. Acreditamos que ao educar as pessoas sobre os benefícios desses produtos e incentivá-las a adotá-los em suas vidas diárias, podemos ajudar a reduzir o impacto ambiental e criar um mundo mais sustentável. Acreditamos que cada um de nós tem o poder de fazer a diferença através de escolhas conscientes e responsáveis no nosso dia a dia.</p>
+        <p><strong class="color-blue">Valores:</strong><br>O nosso site é orientado por valores e princípios éticos rigorosos, como transparência, honestidade, compromisso com a sustentabilidade e respeito pelo meio ambiente. Acreditamos que esses valores são fundamentais para a construção de uma marca forte e confiável e fazemos questão de aplicá-los em todas as nossas atividades e decisões.</p>
+        <p><strong class="color-blue">Objetivos:</strong><br>O nosso objetivo principal é aumentar a consciencialização sobre a importância da utilização de produtos ecológicos e reciclados e ajudar as pessoas a incorporá-los nas suas vidas diárias. Além disso, pretendemos aumentar as vendas destes produtos na nossa loja online e expandir a nossa base de leitores e seguidores nas redes sociais.</p>
+        <p><strong class="color-blue">Políticas e práticas:</strong><br>Nossas políticas são orientadas pelos nossos valores e compromisso com a sustentabilidade. Selecionamos cuidadosamente nossos fornecedores e garantimos que todos os nossos produtos são reciclados e ecológicos. Além disso, monitorizamos constantemente a qualidade dos produtos que vendemos para garantir que cumpram os nossos padrões rigorosos.</p>
+        <p><strong class="color-blue">Contacto:<br></strong>Estamos sempre disponíveis para ouvir os nossos leitores e seguidores. Se tiver alguma dúvida, comentário ou sugestão, por favor, entre em contacto connosco através do nosso endereço de e-mail ou das redes sociais. Teremos todo o gosto em responder e ajudá-lo em tudo o que precisar.</p>
+        <p><strong class="color-blue">Diferencial:</strong><br>O que nos distingue de outros sites na mesma área é a nossa abordagem completa e confiável em relação aos produtos ecológicos e reciclados. Fornecemos informações precisas e relevantes sobre esses produtos, além de oferecer uma ampla seleção deles em nossa loja online. Além disso, nossa abordagem é acessível e prática, tornando a adoção de práticas sustentáveis mais fácil e acessível para todos.</p>
+        <p><strong class="color-blue">Compromisso com a redução de resíduos:</strong><br>Estamos empenhados em reduzir a quantidade de resíduos que produzimos e minimizar o nosso impacto no meio ambiente. Para isso, adotamos práticas sustentáveis, como a redução de embalagens, a reciclagem de materiais e o uso de energia renovável. Acreditamos que cada pequena ação faz a diferença e estamos comprometidos em fazer a nossa parte.</p>      
+      </div>
+    </div>
+  </div>
+    <p><strong class="color-blue">* Juntos, podemos construir um futuro sustentável para o planeta *</strong></p><br>
+
+    <script src="scriptsobrenos.js"></script>
+
+    <footer>
+        <div class="content">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic">Quem somos</div>
+              <p>A PER é uma marca sustentável que produz e comercializa produtos com materiais reciclados e/ou ecológicos o seu objetivo é promover a sustentabilidade e a conscientização ambiental além do objetivo de reduzir a quantidade de resíduos e promover o desenvolvimento sustentável através da economia circular</p>
+            </div>
+            <div class="lower">
+              <div class="topic">Entre em contacto</div>
+              <div class="phone">
+                <a href="contactos.html"><i class='bx bx-phone-call'></i>+250 9089 6767</a>
+              </div>
+              <div class="email">
+                <a href="mailto:INFO.PERPT@gmail.com"><i class='bx bx-envelope'></i>INFO.PERPT@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <a href="#"><img src="logotipo/PNG/lOGO FINALFINAL SEM FUNDO Azul.png" alt="Logo"></a>
+          </div>
+          <div class="right box">
+            <div class="topic">Subscreva a newsletter</div>
+            <form action="#">
+              <input type="email" placeholder="Insira o seu endereço de e-mail" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Insira um email válido">
+              <input type="submit" name="" value="Subscrever">
+              <div class="media-icons">
+                <a href="https://www.facebook.com/profile.php?id=100093947058630" class="facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/infoperpt/" class="instagram"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/INFOPERPT" class="twitter"><i class='bx bxl-twitter' ></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </footer>
+
+</body>
+</html>

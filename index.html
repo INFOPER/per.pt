@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <style>
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+    
+        #loader.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+    
+        #loader img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(window).on("load", function() {
+            setTimeout(function() {
+                $("#loader").addClass("hide");
+            }, 1000); // Defina a velocidade em milissegundos
+        });
+    </script>
+
+    <title>Minha Página Inicial</title>
+</head>
+<body>
+    <div id="loader">
+		<img src="img/Loading miguel/loading.gif" alt="Carregando...">
+   </div>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <div class="logo">
+                <a href="#"><img src="logotipo/PNG/logo.png" alt="Logo" id="logo"></a></span>
+                <a href="#"><img src="logotipo/PNG/logo-dark.png" alt="Dark Logo" id="dark-logo"></a>
+              </div>
+                
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo">
+                <a href="index.html"><img src="logotipo/PNG/logo.png" alt="Logo" id="logo"></a>
+                <a href="index.html"><img src="logotipo/PNG/logo-dark.png" alt="Dark Logo" id="dark-logo"></a></span>                  
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="inicio">Página Inicial</a></li>
+                    <li><a href="loja.html" class="loja">Loja</a></li>
+                    <li><a href="sobrenos.html" class="Sobre">Sobre nós</a></li>
+                    <li><a href="contactos.html" class="Contacto">Contactos</a></li>
+                </ul>
+            </div>
+
+              <div class="darkLight-searchBox">
+                  <div class="searchBox">
+                    <div class="searchToggle">
+                      <i class='bx bx-x cancel'></i>
+                      <i class='bx bx-search search'></i>
+                    </div>
+
+                      <div class="search-field">
+                        <a href="" target="_blank" hidden></a>
+                          <input type="text" placeholder="Procurar...">
+                          <div class="autocom-box">
+                            <!-- here list are inserted from javascript -->
+                          </div>
+                          <i class='bx bx-search'></i>
+                      </div>
+                  </div>
+
+                <div class="cart-toggle">
+                      <i class='bx bx-shopping-bag'></i>
+                      <a href="loja.html"></a>
+                  </div>                  
+               
+
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+            </div>
+       
+        </div>
+    </nav>   
+    <style>
+      .text {
+          background-color: #000000;
+          background-size: cover;
+      }
+  </style>  
+      <main class="dark-mode">
+        <section id="hero">
+		  <h1>Bem-vindo à nossa página!</h1>
+        </section>
+      </main>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img/JPG/image1.jpg" style="width:100%" onclick="window.location.href='loja.html';">
+          <div class="text" style="width:100%">Clica na imagem e vem conhecer os nossos produtos na nossa loja</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="img/JPG/image2.jpg" style="width:100%" onclick="window.location.href='sobrenos.html';">
+          <div class="text" style="width:100%">Clica na imagem e fica a conhecer um pouco mais sobrenos</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="img/JPG/image3.jpg" style="width:100%" onclick="window.location.href='contactos.html';">
+          <div class="text" style="width:100%">Clica na imagem e vê os nossos contactos</div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/JPG/image4.jpg" style="width:100%" >
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/JPG/image5.jpg" style="width:100%" >
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/JPG/image6.jpg" style="width:100%" >
+        </div>
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div>
+    </div>
+      
+      
+      
+      
+      <div class="descricao">
+				<p><h2>Porquê PER?</h2></p>
+				<p>PER significa "Produtos Écologicos e Reciclados" e está amplamente ligado ao "Princípio dos 3 Rs": Reduzir, Reutilizar e Reciclar.<br>Produtos ecológicos e reciclados estão intimamente ligados a este princípio, pois são formas de implementar estas três ações na prática. Reduzir: Os produtos ecológicos são projetados para reduzir o impacto ambiental. Reutilizar: A reutilização de produtos é uma forma importante de reduzir a quantidade de resíduos que produzimos. Reciclar: A reciclagem é o processo de transformação de materiais usados em novos produtos. </p>
+				<a href="sobrenos.html" class="botao1">Saiba mais</a><br>
+			</div>
+      <div class="descricao1">
+				<p><h2>O que são as alterações climáticas?</h2></p>
+				<p>As alterações climáticas são um dos maiores desafios que a humanidade enfrenta atualmente. São causadas principalmente pela emissão de gases de efeito estufa, como o dióxido de carbono, na atmosfera, resultante de atividades humanas como a queima de combustíveis fósseis para transporte e produção de energia, a agricultura intensiva e a indústria. </p>
+			</div>
+      <div class="descricao1">
+				<p><h2>Quais as consequencias das alterações climáticas?</h2></p>
+				<p>As consequências das alterações climáticas podem ser graves e afetar diferentes aspectos da vida no planeta, incluindo a biodiversidade, os ecossistemas, a saúde humana, a economia e a segurança alimentar. Algumas das consequências mais evidentes incluem o aumento das temperaturas globais, o derretimento de geleiras e calotas polares, a elevação do nível do mar e o aumento da frequência e intensidade de eventos climáticos extremos, como ondas de calor, vagas de frio, tempestades e secas. </p>
+			</div>
+      <div class="descricao1">
+				<p><h2>Como combater alterações climáticas?</h2></p>
+				<p>Para combater as alterações climáticas e reduzir suas consequências, é necessário adotar práticas sustentáveis em todas as áreas da sociedade. Isso inclui a adoção de fontes de energia renovável, a redução da emissão de gases de efeito estufa na indústria e transporte, a agricultura sustentável e a preservação de áreas naturais, como florestas e oceanos. </p>
+			</div>
+      <div class="descricao1">
+				<p><h2>Produtos ecológicos e reciclados ajudam a combater alterações climáticas?</h2></p>
+				<p>Sim, os produtos ecológicos e reciclados são uma forma importante de contribuir para a redução das emissões de gases de efeito estufa e minimizar o impacto ambiental. Eles são projetados para serem produzidos de maneira sustentável, com materiais reciclados ou reaproveitados, e muitas vezes são fabricados localmente para reduzir as emissões de transporte. Ao escolher produtos ecológicos e reciclados, estamos a fazer uma escolha consciente e responsável para proteger o meio ambiente e combater as alterações climáticas. Cada pequena ação conta e juntos podemos fazer a diferença para um futuro mais sustentável. </p>
+			</div>
+			<div class="descricao">
+				<p><h2>O que são produtos ecologicos e reciclados?</h2></p>
+				<p>Produtos ecológicos e reciclados são produtos que são produzidos de forma sustentável e com materiais reciclados ou reutilizados.<br> Eles são concebidos para minimizar o impacto ambiental e reduzir a pegada de carbono, ajudando a preservar os recursos naturais e a reduzir a poluição.<br> Estes produtos podem incluir uma variedade de itens, desde materiais de construção e mobiliário até vestuário e produtos de higiene pessoal.<br> São uma forma importante de promover a sustentabilidade e a responsabilidade social, e são muitas vezes uma escolha popular entre os consumidores que procuram um estilo de vida mais consciente e amigo do ambiente.<br> Podes consultar alguns dos nossos produtos na nossa loja. </p>
+				<a href="loja.html" class="botao2">Loja</a><br>
+			</div>
+      <div class="descricao1">
+				<p><h2>Algumas dicas de como adotar um estilo de vida mais sustentável</h2></p>
+				<p>Consciencialização e Educação: Informe-se sobre as questões ambientais atuais, como as alterações climáticas, poluição, perda de biodiversidade e esgotamento dos recursos naturais. Compreender a importância da sustentabilidade é o primeiro passo para agir de forma consciente.<p>
+
+Redução do Consumo: Repense os seus hábitos de consumo e evite o desperdício. Compre apenas o necessário, opte por produtos duradouros e de qualidade, evite o uso excessivo de embalagens descartáveis e dê preferência a marcas e produtos com práticas sustentáveis.<br><p>
+
+Reutilização e Reciclagem: Dê uma segunda vida aos objetos que possui. Pratique a reutilização, consertando ou doando objetos antes de os descartar. Separe corretamente o lixo para reciclagem, garantindo que os materiais sejam encaminhados para o processo adequado.<br><p>
+
+Poupança de Energia: Reduza o consumo de energia na sua casa. Desligue os aparelhos eletrónicos quando não estão em uso, substitua as lâmpadas por versões de baixo consumo, aproveite a luz natural e adote práticas de eficiência energética, como isolamento térmico e uso de painéis solares.<br><p>
+
+Transporte Sustentável: Opte por meios de transporte mais sustentáveis, como caminhar, usar bicicleta ou transportes públicos. Se possível, partilhe boleias ou considere a utilização de veículos elétricos.<br><p>
+
+Alimentação Responsável: Faça escolhas alimentares conscientes. Prefira alimentos orgânicos e de origem local, reduza o consumo de carne e evite o desperdício de alimentos. Uma dieta equilibrada e baseada em vegetais pode ter um impacto significativo na redução da pegada ambiental.<br><p>
+
+Conservação da Água: Poupe água nas suas atividades diárias. Tome banhos mais curtos, feche a torneira enquanto escova os dentes, repare fugas de água e reutilize-a sempre que possível, como para regar plantas.<br><p>
+
+Envolvimento Comunitário: Participe em projetos locais de sustentabilidade, associações de bairro ou grupos que promovam práticas sustentáveis. Partilhe os seus conhecimentos e experiências para incentivar outros a adotarem um estilo de vida mais sustentável.</p>
+			</div>
+      <div class="descricao1">
+				<p><h2>O que fizemos o que deveríamos ter feito e o que podemos fazer agora?</h2></p>
+				<p>Nos últimos anos, tem havido um aumento significativo na conscientização sobre as alterações climáticas e nos esforços para combatê-las. No entanto, muitos especialistas argumentam que ainda não fizemos o suficiente para enfrentar esse desafio global de maneira eficaz.<p>
+
+          Embora tenham sido tomadas algumas medidas importantes, como a adoção de acordos internacionais como o Acordo de Paris e o aumento do uso de energias renováveis, ainda há muito mais a ser feito. As emissões de gases de efeito estufa continuam a aumentar e as consequências das alterações climáticas estão se tornando cada vez mais evidentes.<br><p>
+          
+          Para enfrentar adequadamente as alterações climáticas, é necessária uma ação conjunta e coordenada em várias áreas. Algumas ações que poderíamos ter realizado mais incluem:<br><p>
+          
+          Redução das emissões de gases de efeito estufa: Poderíamos ter implementado políticas mais ambiciosas para reduzir as emissões em setores-chave, como transporte, indústria e energia.<br><p>
+          
+          Investimento em tecnologias limpas: Poderíamos ter aumentado os investimentos em pesquisa e desenvolvimento de tecnologias limpas, como energia solar, eólica e armazenamento de energia.<br><p>
+          
+          Adaptação e resiliência: Poderíamos ter implementado medidas de adaptação para lidar com os impactos das alterações climáticas, como o aumento do nível do mar, eventos climáticos extremos e escassez de água.<br><p>
+          
+          Educação e sensibilização: Poderíamos ter intensificado os esforços de educação e sensibilização para aumentar a compreensão pública sobre as alterações climáticas e a importância de ações individuais e coletivas.<br><p>
+          
+          Olhando para o futuro, é crucial que redobremos nossos esforços para enfrentar as alterações climáticas. Isso inclui a implementação de políticas mais ambiciosas, o investimento em tecnologias limpas, a promoção de estilos de vida sustentáveis e a colaboração global para alcançar metas climáticas.<br><p>
+          
+          A luta contra as alterações climáticas é um desafio urgente e complexo, mas com ações determinadas e coletivas, podemos fazer a diferença e criar um futuro mais sustentável para as próximas gerações. </p>
+			</div>
+ <style>
+.video {
+  display: block;
+  align-items: flex-start;
+}
+
+.video h2 {
+  text-align: left;
+}
+
+.video video {
+  width: 100%;
+  height: auto;
+}
+</style>
+
+<div class="video">
+  <h2>Vê neste video o impacto das alterações climáticas no nosso planeta</h2><br>
+  <video id="meuVideo" controls>
+    <source src="video/video 1.mp4" type="video/mp4">
+  </video>
+</div>
+
+        
+    
+    
+                            
+                   
+      <!-- Adicione isso no final do HTML -->
+    <script src="script.js" defer></script>
+    document.getElementById('meuVideo').addEventListener('click', function() {
+  this.play();
+});
+    <footer>
+        <div class="content">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic">Quem somos</div>
+              <p>A PER é uma marca sustentável que produz e comercializa produtos com materiais reciclados e/ou ecológicos o seu objetivo é promover a sustentabilidade e a conscientização ambiental além do objetivo de reduzir a quantidade de resíduos e promover o desenvolvimento sustentável através da economia circular</p>
+            </div>
+            <div class="lower">
+              <div class="topic">Entre em contacto</div>
+              <div class="phone">
+                <a href="contactos.html"><i class='bx bx-phone-call'></i>+250 9089 6767</a>
+              </div>
+              <div class="email">
+                <a href="mailto:INFO.PERPT@gmail.com"><i class='bx bx-envelope'></i>INFO.PERPT@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <a href="#"><img src="logotipo/PNG/lOGO com cores.png" alt="Logo"></a>
+          </div>
+          <div class="right box">
+            <div class="topic">Subscreva a newsletter</div>
+            <form action="#">
+               <input type="email" placeholder="Insira o seu endereço de e-mail" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Insira um email válido">
+              <input type="submit" name="" value="Subscrever">
+              <div class="media-icons">
+                <a href="https://www.facebook.com/profile.php?id=100093947058630" class="facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/infoperpt/" class="instagram"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/INFOPERPT" class="twitter"><i class='bx bxl-twitter' ></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </footer>
+    
+</body>
+</html>

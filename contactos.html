@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="stylecontactos.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+    
+        #loader.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+    
+        #loader img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(window).on("load", function() {
+            setTimeout(function() {
+                $("#loader").addClass("hide");
+            }, 1000); // Defina a velocidade em milissegundos
+        });
+    </script>
+
+    <title>Contactos</title>
+</head>
+<body>
+    <div id="loader">
+		<img src="img/Loading miguel/loading.gif" alt="Carregando...">
+   </div>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <div class="logo">
+                <a href="index.html"><img src="logotipo/PNG/logo.png" alt="Logo" id="logo"></a></span>
+                <a href="index.html"><img src="logotipo/PNG/logo-dark.png" alt="Dark Logo" id="dark-logo"></a>
+              </div>
+                
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo">
+                <a href="#"><img src="logotipo/PNG/logo.png" alt="Logo" id="logo"></a>
+                <a href="#"><img src="logotipo/PNG/logo-dark.png" alt="Dark Logo" id="dark-logo"></a></span>                  
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="inicio">Página Inicial</a></li>
+                    <li><a href="loja.html" class="loja">Loja</a></li>
+                    <li><a href="sobrenos.html" class="Sobre">Sobre nós</a></li>
+                    <li><a href="contactos.html" class="Contacto">Contactos</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+
+                   <div class="search-field">
+                    <a href="" target="_blank" hidden></a>
+                      <input type="text" placeholder="Procurar...">
+                      <div class="autocom-box">
+                        <!-- here list are inserted from javascript -->
+                      </div>
+                      <i class='bx bx-search'></i>
+                  </div>
+              </div>
+
+                <div class="cart-toggle">
+                      <i class='bx bx-shopping-bag'></i>
+                      <a href="loja.html"></a>
+                  </div>                  
+               
+
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+            </div>
+       
+        </div>
+    </nav>
+    <main class="dark-mode">
+      <section id="hero">
+        <h1>Aqui podes encontrar os nossos contactos!</h1>
+      </section>
+    </main>
+    <main role="main" aria-label="Content">
+      <div class="margin-large no-bottom-margin">
+        <div class="container-bg">
+          <div class="container">
+            <h1 class="title-small margin-medium"><strong class="color-yellow">Contactos</strong></h1>
+            <div class="cms cms-large margin-medium">
+              <div class="contacts-container">
+                <div class="contacts-left">
+                  <p><strong class="color-yellow">Telefone:</strong><br>250 9089 6767 *</p>
+                  <p><strong class="color-yellow">Email:</strong><br>info@per.pt</p>
+                  <p><strong class="color-yellow">Morada:<br></strong>Santa Maria da Feira</p>
+                  <p>* Chamada para a rede fixa nacional, de acordo com o seu tarifário.</p>
+                  <p><strong class="color-yellow">Politica de devolução:</strong><br>Prazo para a devolução 14 dias: este é o período de tempo durante o qual os clientes podem devolver um produto. </p>
+                </div>
+                <div class="contacts-right">
+                  <p><strong class="color-yellow">Redes Sociais:</strong></p>
+                  <p>Siga a PER nas redes sociais e junte-se a nós na missão de promover um mundo mais sustentável. Juntos, podemos fazer a diferença! Partilhe as suas ideias, dicas e projetos e ajude-nos a inspirar mais pessoas a viver de forma mais ecológica e responsável.</p>
+                  <p>A PER tem página no Facebook, Instagram e Twitter.</p>
+                  <div class="redes-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100093947058630" class="facebook"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/infoperpt/" class="instagram"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://twitter.com/INFOPERPT" class="twitter"><i class='bx bxl-twitter' ></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-footer-space"></div>
+    </main>        
+      
+
+    <script src="scriptcontactos.js"></script>
+
+    <footer>
+        <div class="content">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic">Quem somos</div>
+              <p>A PER é uma marca sustentável que produz e comercializa produtos com materiais reciclados e/ou ecológicos o seu objetivo é promover a sustentabilidade e a conscientização ambiental além do objetivo de reduzir a quantidade de resíduos e promover o desenvolvimento sustentável através da economia circular</p>
+            </div>
+            <div class="lower">
+              <div class="topic">Entre em contacto</div>
+              <div class="phone">
+                <a href="contactos.html"><i class='bx bx-phone-call'></i>+250 9089 6767</a>
+              </div>
+              <div class="email">
+                <a href="mailto:INFO.PERPT@gmail.com"><i class='bx bx-envelope'></i>INFO.PERPT@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <a href="#"><img src="logotipo/PNG/lOGO FINALFINAL SEM FUNDO Amarelo.png" alt="Logo"></a>
+          </div>
+          <div class="right box">
+            <div class="topic">Subscreva a newsletter</div>
+            <form action="#">
+              <input type="email" placeholder="Insira o seu endereço de e-mail" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Insira um email válido">
+              <input type="submit" name="" value="Subscrever">
+              <div class="media-icons">
+                <a href="https://www.facebook.com/profile.php?id=100093947058630" class="facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/infoperpt/" class="instagram"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://twitter.com/INFOPERPT" class="twitter"><i class='bx bxl-twitter' ></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </footer>
+
+</body>
+</html>
